@@ -1,0 +1,8 @@
+---
+- name: Enable Repo (RedHat)
+  include_tasks:
+    file: tasks/RedHat.yml
+  when: ansible_os_family == 'RedHat'
+
+- name: Ensure Yadm Is Present
+  package: name="{{ yadm_pkg_name }}" state=present

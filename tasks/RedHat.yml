@@ -1,0 +1,8 @@
+---
+- name: Ensure Yadm Repo Is Present
+  become: true
+  get_url:
+    url: "{{ yadm_redhat_repo_url }}"
+    dest: "{{ yadm_redhat_repo_dir }}/{{ yadm_redhat_repo_url | basename }}"
+    mode: 0644
+  when: ansible_distribution_major_version in ['6', '7', '28', '29']

@@ -1,0 +1,5 @@
+---
+yadm_pkg_name: yadm
+yadm_redhat_repo_dir: /etc/yum.repos.d
+yadm_redhat_repo_version: "{{ 'epel' if ansible_distribution == 'CentOS' else 'fedora' if ansible_distribution == 'Fedora' }}-{{ ansible_distribution_major_version }}"
+yadm_redhat_repo_url: "https://copr.fedorainfracloud.org/coprs/thelocehiliosan/yadm/repo/{{ yadm_redhat_repo_version }}/thelocehiliosan-yadm-{{ yadm_redhat_repo_version }}.repo"
