@@ -1,5 +1,12 @@
 ---
+# Name of the Yadm pacakge across distributions
 yadm_pkg_name: yadm
+
+# Repo directory for RedHat based distributions
 yadm_redhat_repo_dir: /etc/yum.repos.d
+
+# Build variable for yadm_redhat_repo_url
 yadm_redhat_repo_version: "{{ 'epel' if ansible_distribution == 'CentOS' else 'fedora' if ansible_distribution == 'Fedora' }}-{{ ansible_distribution_major_version }}"
+
+# Yadm repo url for RedHat based distributions
 yadm_redhat_repo_url: "https://copr.fedorainfracloud.org/coprs/thelocehiliosan/yadm/repo/{{ yadm_redhat_repo_version }}/thelocehiliosan-yadm-{{ yadm_redhat_repo_version }}.repo"

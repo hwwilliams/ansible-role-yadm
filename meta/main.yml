@@ -4,7 +4,7 @@ dependencies: []
 galaxy_info:
   role_name: yadm
   author: hwwilliams
-  description: Install Yadm, version control for dotfiles built ontop of Git
+  description: Install Yadm, version control for dotfiles built on top of Git
   license: license (MIT)
   min_ansible_version: 2.4
   platforms:
