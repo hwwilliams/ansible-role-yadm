@@ -1,4 +1,12 @@
 ---
+- name: Show Yadm RedHat Repo Version
+  debug:
+    msg: "{{ yadm_redhat_repo_version }}"
+
+- name: Show Yadm RedHat Repo URL
+  debug:
+    msg: "{{ yadm_redhat_repo_url }}"
+
 - name: Ensure Yadm Repo Is Present
   become: true
   get_url:
