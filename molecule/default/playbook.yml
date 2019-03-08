@@ -14,3 +14,8 @@
       changed_when: false
   roles:
     - role: hwwilliams.yadm
+  tasks:
+    - name: Ensure Yadm Is Installed
+      command: yadm --version
+      register: yadm_version
+      failed_when: yadm_version.rc != 0
